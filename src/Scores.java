@@ -1,7 +1,7 @@
 public interface Scores {
     String toString();
 
-    boolean add(GameEntry e);
+    boolean addScore(GameEntry e);
 
     GameEntry get(int i);
 
