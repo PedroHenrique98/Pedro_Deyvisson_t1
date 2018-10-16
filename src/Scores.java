@@ -1,4 +1,4 @@
-public interface Scores {
+public interface Scores{
     String toString();
 
     boolean addScore(GameEntry e);

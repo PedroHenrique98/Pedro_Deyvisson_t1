@@ -1,2 +1,5 @@
-public class ScoresSerializacao {
+public class ScoresSerializacao{
+    public static void main(String[] args) {
+
+    }
 }

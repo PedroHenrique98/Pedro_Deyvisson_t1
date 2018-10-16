@@ -1,4 +1,4 @@
-public class App {
+public class TesterClass {
     public static void main(String[] args){
         Jogo PacMan = new Jogo("PacMan", "Puzzle");
 

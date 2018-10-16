@@ -1,13 +1,15 @@
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Jogo implements Scores{
+public class Jogo implements Scores, Serializable {
 
     private String nomeJogo;
     private String categoria;
     private List<GameEntry> top10;
 
     public Jogo(String n, String c){
+        super();
         nomeJogo = n;
         categoria = c;
         top10 = new ArrayList<>();
