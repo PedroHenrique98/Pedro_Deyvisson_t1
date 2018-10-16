@@ -1,8 +1,11 @@
-public class GameEntry{
+import java.io.Serializable;
+
+public class GameEntry implements Serializable {
     private String nome;
     private int score;
 
     public GameEntry(String n, int s){
+        super();
         nome = n;
         score = s;
     }

@@ -1,0 +1,11 @@
+
+Ciro,2000
+Pedro,1500
+Gilberto,1465
+Haddad,1450
+Deyvisson,1350
+Joao,1200
+Renan,1145
+Caetano,1000
+Jose,985
+Camila,750

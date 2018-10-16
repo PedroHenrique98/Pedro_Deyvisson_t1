@@ -29,7 +29,7 @@ public class Jogo implements Scores, Serializable {
 
     /** Retorna uma string representando o objeto
      * Formato: [(<name>, <score>), (<name>, <score>) …]
-     * Exemplo: [(John, 10), (Carol 5), (Dan, 3)]
+     * Exemplo: [(John, 10), (Carol, 5), (Dan, 3)]
      */
     public String toString(){
         String str;
