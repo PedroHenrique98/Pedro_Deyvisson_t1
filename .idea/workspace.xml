@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="46175133-489d-4c92-a70d-5d60be5d5d4b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/GameEntry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameEntry.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Jogo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Jogo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ScoresSerializacao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ScoresSerializacao.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -37,12 +36,12 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="16" />
-          <entry key="java" value="3498" />
+          <entry key="java" value="3603" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="3498" />
+          <entry key="JAVA" value="3603" />
           <entry key="PLAIN_TEXT" value="16" />
         </counts>
       </usages-collector>
@@ -98,8 +97,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ScoresSerializacao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="99" column="39" lean-forward="true" selection-start-line="99" selection-start-column="39" selection-end-line="99" selection-end-column="39" />
+            <state relative-caret-position="102">
+              <caret line="92" column="49" selection-start-line="92" selection-start-column="49" selection-end-line="92" selection-end-column="49" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -178,7 +177,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1539660074633" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1539660331581" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="SDKs" />
@@ -236,12 +235,12 @@
       <workItem from="1539374921760" duration="10077000" />
       <workItem from="1539399454251" duration="7088000" />
       <workItem from="1539632913300" duration="1230000" />
-      <workItem from="1539654124631" duration="5654000" />
+      <workItem from="1539654124631" duration="6101000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24049000" />
+    <option name="totallyTimeSpent" value="24496000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -256,13 +255,13 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32907802" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32907802" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32907802" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.32907802" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="10" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.32907802" />
@@ -323,8 +322,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ScoresSerializacao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="99" column="39" lean-forward="true" selection-start-line="99" selection-start-column="39" selection-end-line="99" selection-end-column="39" />
+        <state relative-caret-position="102">
+          <caret line="92" column="49" selection-start-line="92" selection-start-column="49" selection-end-line="92" selection-end-column="49" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

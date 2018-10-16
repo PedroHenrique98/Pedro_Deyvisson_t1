@@ -1,4 +1,4 @@
-
+Jogador:,Score:
 Ciro,2000
 Pedro,1500
 Gilberto,1465

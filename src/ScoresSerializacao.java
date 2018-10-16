@@ -90,7 +90,8 @@ public class ScoresSerializacao{
                 System.out.println("Gravando Arquivo CSV:");
                 Path caminhoCSV = Paths.get("ArquivoCSV.txt");
                 try(PrintWriter gravador = new PrintWriter(Files.newBufferedWriter(caminhoCSV))) {
-                    String str = PacMan.toString();
+                    String str = "Jogador:,Score:";
+                    str = str + PacMan.toString();
                     System.out.println("...");
                     str = str.replace('[', ' ');
                     str = str.replace(']',' ');
