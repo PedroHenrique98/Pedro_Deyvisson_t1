@@ -18,6 +18,11 @@ public class TesterClass {
         GameEntry g14 = new GameEntry("Boulos", 1335);
         GameEntry g15 = new GameEntry("Alvaro", 920);
 
+        //Errados para teste de exceção
+
+        //GameEntry ex1 = new GameEntry("djdd",-125);
+        //PacMan.addScore(ex1);
+
         PacMan.addScore(g1);
         PacMan.addScore(g2);
         PacMan.addScore(g3);

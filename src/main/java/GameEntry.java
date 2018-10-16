@@ -4,8 +4,11 @@ public class GameEntry implements Serializable {
     private String nome;
     private int score;
 
-    public GameEntry(String n, int s){
+    public GameEntry(String n, int s) throws IllegalArgumentException{
         super();
+        if(n==null || n=="" || s<0){
+            throw new IllegalArgumentException();
+        }
         nome = n;
         score = s;
     }

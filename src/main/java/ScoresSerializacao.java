@@ -88,7 +88,7 @@ public class ScoresSerializacao{
                 break;
             case 3:
                 System.out.println("Gravando Arquivo CSV:");
-                Path caminhoCSV = Paths.get("ArquivoCSV.txt");
+                Path caminhoCSV = Paths.get("ArquivoCSV.csv");
                 try(PrintWriter gravador = new PrintWriter(Files.newBufferedWriter(caminhoCSV))) {
                     String str = "Jogador:,Score:";
                     str = str + PacMan.toString();

@@ -6,12 +6,14 @@ public class Jogo implements Scores, Serializable {
 
     private String nomeJogo;
     private String categoria;
+    private int capacity;
     private List<GameEntry> top10;
 
     public Jogo(String n, String c){
         super();
         nomeJogo = n;
         categoria = c;
+        capacity = 10;
         top10 = new ArrayList<>();
     }
 
@@ -49,7 +51,7 @@ public class Jogo implements Scores, Serializable {
     public boolean addScore(GameEntry g){
         if(top10.isEmpty()){
             top10.add(0,g);
-        } else if (top10.size() < 10) {
+        } else if (top10.size() < capacity) {
             for (int i = top10.size() - 1; i >= 0; i--) {
                 if (top10.get(i).getScore() > g.getScore()) {
                     top10.add(i + 1, g);
@@ -58,8 +60,8 @@ public class Jogo implements Scores, Serializable {
             }
             top10.add(0,g);
             return true;
-        } else if (top10.get(9).getScore() < g.getScore()) {
-            top10.remove(top10.get(9));
+        } else if (top10.get(capacity-1).getScore() < g.getScore()) {
+            top10.remove(top10.get(capacity-1));
             for (int j = top10.size() - 1; j >= 0; j--) {
                 if (top10.get(j).getScore() > g.getScore()) {
                     top10.add(j + 1, g);
@@ -84,7 +86,7 @@ public class Jogo implements Scores, Serializable {
     /** Retorna a capacidade de coleção */
     @Override
     public int getCapacity(){
-        return 10;
+        return capacity;
     }
 
     /** Retorna o número de scores armazenados */
