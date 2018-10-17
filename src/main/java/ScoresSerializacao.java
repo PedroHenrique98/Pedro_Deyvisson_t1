@@ -1,8 +1,10 @@
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import java.io.*;
+import java.nio.charset.StandardCharsets;
 import java.nio.file.*;
-
+import java.util.*;
+//Necessario dar reimport no Maven Project
 public class ScoresSerializacao{
     public static void main(String[] args) {
         Jogo PacMan = new Jogo("PacMan", "Puzzle");
@@ -29,7 +31,13 @@ public class ScoresSerializacao{
         PacMan.addScore(g9);
         PacMan.addScore(g10);
 
-        int op = 4;
+        System.out.print("Digite 1 para Arquivo Binario\n");
+        System.out.print("Digite 2 para Arquivo Serializado\n");
+        System.out.print("Digite 3 para Arquivo CSV\n");
+        System.out.print("Digite 4 para Arquivo JSON\n");
+        Scanner in = new Scanner(System.in);
+
+        int op = in.nextInt();
 
         switch (op){
 
@@ -73,14 +81,14 @@ public class ScoresSerializacao{
                     e.printStackTrace();
                 }
 
-                System.out.println("Lendo arquivo Binario:");
+                System.out.println("Lendo arquivo Serializado:");
 
                 try (ObjectInputStream lendo = new ObjectInputStream(Files.newInputStream(caminhoSerializado))) {
                     Jogo jog = (Jogo) lendo.readObject();
                     System.out.println(jog);
-                    System.out.println("Arquivo Binario lido com sucesso! :)");
+                    System.out.println("Arquivo Serializado lido com sucesso! :)");
                 } catch (IOException | ClassNotFoundException e) {
-                    System.out.println("Falha ao ler arquivo Binario! :(");
+                    System.out.println("Falha ao ler arquivo Serializado! :(");
                     e.printStackTrace();
 
                 }
@@ -89,6 +97,7 @@ public class ScoresSerializacao{
                 System.out.println("Gravando Arquivo CSV:");
                 Path caminhoCSV = Paths.get("ArquivoCSV.csv");
                 try(PrintWriter gravador = new PrintWriter(Files.newBufferedWriter(caminhoCSV))) {
+
                     String str = "Jogador:,Score:";
                     str = str + PacMan.toString();
                     System.out.println("...");
@@ -99,7 +108,8 @@ public class ScoresSerializacao{
                     str = str.replace("  ", "\n");
                     str = str.replace(" ", "");
                     str = str.replace(",\n", "\n");
-                    gravador.print(str);
+                    String strfinal = "Top 10 Scores " + PacMan.getNomeJogo() + ":,\n" + str;
+                    gravador.print(strfinal);
                     System.out.println("Arquivo CSV escrito com sucesso!:)");
                 } catch (IOException e) {
                     System.out.println("Falha ao escrever arquivo CSV!:(");
@@ -134,16 +144,24 @@ public class ScoresSerializacao{
                     System.out.println("Falha ao escrever arquivo JSON! :(");
                     e.printStackTrace();
                 }
+
                 System.out.println("Lendo arquivo JSON");
-                try {
-                    Gson gson = new GsonBuilder().setPrettyPrinting().create();
-                    String str = gson.toJson();
+
+                try(BufferedReader entrada = Files.newBufferedReader(caminhoJSON, StandardCharsets.ISO_8859_1)) {
+                    String linha;
+                    while ((linha = entrada.readLine()) != null) {
+                        System.out.println(linha);
+                    }
+
                     System.out.println("Arquivo JSON lido com sucesso!:)");
-                }catch (IOException e){
-                    System.out.println("Falha ao gerar objeto por meio do arquivo JSON!:(");
+
+                } catch (IOException e) {
+                    System.out.println("Falha ao ler arquivo JSON!:(");
                     e.printStackTrace();
                 }
                 break;
+            default:
+                    System.out.println("Opção não é válida.");
 
         }
     }
