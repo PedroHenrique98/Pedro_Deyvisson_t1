@@ -1,8 +1,7 @@
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import java.io.*;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.sql.SQLOutput;
+import java.nio.file.*;
 
 public class ScoresSerializacao{
     public static void main(String[] args) {
@@ -30,7 +29,7 @@ public class ScoresSerializacao{
         PacMan.addScore(g9);
         PacMan.addScore(g10);
 
-        int op = 3;
+        int op = 4;
 
         switch (op){
 
@@ -119,6 +118,32 @@ public class ScoresSerializacao{
                     System.out.println("Falha ao ler arquivo CSV!:(");
                     e.printStackTrace();
                 }
+                break;
+
+            case 4:
+                System.out.println("Gravando Arquivo JSON:");
+
+                Path caminhoJSON = Paths.get("ArquivoJSON.json");
+                try(ObjectOutputStream gravador = new ObjectOutputStream(Files.newOutputStream(caminhoJSON))){
+                    Gson gson = new GsonBuilder().setPrettyPrinting().create();
+                    gravador.writeObject(gson.toJson(PacMan));
+                    System.out.println("...");
+                    System.out.println("Arquivo JSON escrito com sucesso!:)");
+                } catch (IOException e) {
+                    System.out.println("...");
+                    System.out.println("Falha ao escrever arquivo JSON! :(");
+                    e.printStackTrace();
+                }
+                System.out.println("Lendo arquivo JSON");
+                try {
+                    Gson gson = new GsonBuilder().setPrettyPrinting().create();
+                    String str = gson.toJson();
+                    System.out.println("Arquivo JSON lido com sucesso!:)");
+                }catch (IOException e){
+                    System.out.println("Falha ao gerar objeto por meio do arquivo JSON!:(");
+                    e.printStackTrace();
+                }
+                break;
 
         }
     }
